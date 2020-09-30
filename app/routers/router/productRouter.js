@@ -7,11 +7,13 @@
  */
 const Router = require('koa-router');
 const productController = require('../../controllers/productController')
+const productAdminController = require('../../controllers/admin/productController')
 
 let productRouter = new Router();
 
 productRouter
   .post('/product/getAllProduct', productController.GetAllProduct)
+  .post('/product/admin/getAllProduct', productAdminController.GetAllProduct)
   .post('/product/getPromoProduct', productController.GetPromoProduct)
   .post('/product/getHotProduct', productController.GetHotProduct)
   .post('/product/getProductByCategory', productController.GetProductByCategory)
@@ -19,5 +21,8 @@ productRouter
   .post('/product/getProductBySearch', productController.GetProductBySearch)
   .post('/product/getDetails', productController.GetDetails)
   .post('/product/getDetailsPicture', productController.GetDetailsPicture)
+
+
+
   
 module.exports = productRouter;

@@ -16,7 +16,7 @@ const shoppingCartRouter = require('./router/shoppingCartRouter');
 const orderRouter = require('./router/orderRouter');
 const collectRouter = require('./router/collectRouter');
 
-//const productAdminRouter = require('./router/admin/productRouter');
+const productAdminRouter = require('./router/admin/productRouter');
 
 Routers.use(userRouter.routes());
 Routers.use(resourcesRouter.routes());
@@ -25,6 +25,6 @@ Routers.use(shoppingCartRouter.routes());
 Routers.use(orderRouter.routes());
 Routers.use(collectRouter.routes());
 
-//Routers.use(productAdminRouter.routes());
+Routers.use(productAdminRouter.routes());
 
 module.exports = Routers;

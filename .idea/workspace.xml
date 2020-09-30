@@ -19,14 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08499069-d3ec-4f7f-9e51-ffcf8b46e3b8" name="Default Changelist" comment="update adminSystem select products">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/dao/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/dao/db.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routers/router/admin/productRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/router/admin/productRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routers/router/productRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/router/productRouter.js" afterDir="false" />
-    </list>
+    <list default="true" id="08499069-d3ec-4f7f-9e51-ffcf8b46e3b8" name="Default Changelist" comment="update adminSystem select products" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,7 +80,7 @@
       <workItem from="1601256344329" duration="2575000" />
       <workItem from="1601270636273" duration="3110000" />
       <workItem from="1601447043702" duration="3541000" />
-      <workItem from="1601452435621" duration="365000" />
+      <workItem from="1601452435621" duration="715000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1599791249972</created>

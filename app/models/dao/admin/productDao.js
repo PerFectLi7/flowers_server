@@ -35,14 +35,20 @@ module.exports = {
   // 连接数据库,分页获取所有的商品信息
   GetAllProduct: async (offset = 0, rows = 0,fName,cName) => {
     let sql = "SELECT * FROM product p, category c WHERE p.category_id = c.category_id ";
-    console.log("FN"+fName+";"+"CN"+cName)
-     if (fName != undefined){
+     if (fName != undefined && fName != "" && fName != "undefined"){
         sql += `and p.product_name LIKE "%${fName}%"`;
-      }else if (cName != undefined){
-        sql += `and c.category_name LIKE "%${cName}%"`;
       }
-      sql += "limit " + offset + "," + rows;
+      if (cName != undefined  && cName != "" && cName != "undefined"){
+        sql += ` and c.category_name LIKE "%${cName}%"`;
+      }
+      if (rows != 0) {
+          sql += "limit " + offset + "," + rows;
+      }
 
+   /*   let sql = "select * from product ";
+      if (rows != 0) {
+          sql += "limit " + offset + "," + rows;
+      }*/
     return await db.query(sql, []);
   },
   // 连接数据库,根据商品分类id,分页获取商品信息
@@ -59,13 +65,13 @@ module.exports = {
     return await db.query(sql, categoryID);
   },
   // 连接数据库,根据搜索条件,分页获取商品信息
-  GetProductBySearch: async (search, offset = 0, rows = 0) => { 
+  GetProductBySearch: async (search, offset = 0, rows = 0) => {
     let sql = `select * from product where product_name like "%${ search }%" or product_title like "%${ search }%" or product_intro like "%${ search }%"`;
 
     if (rows != 0) {
       sql += "order by product_sales desc limit " + offset + "," + rows;
     }
-    
+
     return await db.query(sql, []);
   },
   // 连接数据库,根据商品id,获取商品详细信息

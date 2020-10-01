@@ -16,5 +16,4 @@ productRouter
     .post('/product/admin/getDetails', productController.GetDetails)
 
 
-
 module.exports = productRouter;
